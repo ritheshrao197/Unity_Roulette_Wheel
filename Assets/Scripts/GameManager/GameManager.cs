@@ -33,7 +33,10 @@ public class GameManager : MonoBehaviour
     public void OnSpin()
     {
         if (Global.selectedNumber < 0)
+        {
+            Debug.Log("Please Select A Number From Dropdown");
             return;
+        }
         Global.isSpinning = true;
         Global.StopTheBall = false;
         CalculateBallPosition();
